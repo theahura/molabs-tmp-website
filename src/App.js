@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import MailingList from './app/components/MailingList';
 import { Modal } from 'semantic-ui-react';
