@@ -1,5 +1,18 @@
 image: node:8.9.1
 
+services: 
+  - mysql:latest
+
+variables:
+  DB_NAME: mailing_list
+  DB_HOST: molabs.ccdbx5sxfhu4.us-east-1.rds.amazonaws.com
+
+connect:
+  image: mysql
+  script:
+  - echo "SELECT 'OK';" | mysql --user="$DB_USERNAME" --password="$DB_PASSWORD" --host="$DB_HOST" "$DB_NAME"
+
+
 pages:
   stage: deploy
   script:
@@ -7,6 +20,7 @@ pages:
   - npm run build
   - rm -rf public
   - mv build public
+  - npm run start:server
   artifacts:
     paths:
     - public

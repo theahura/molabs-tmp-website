@@ -1,6 +1,7 @@
+
 import React from 'react'
 import { Form } from 'semantic-ui-react'
-
+import axios from 'axios';
 
 export default class MailingList extends React.Component {
   constructor(props) {
@@ -18,6 +19,15 @@ export default class MailingList extends React.Component {
   }
 
   handleSubmit(e) {
+    axios.post('/emails', {
+      email: this.state.email
+
+    }).then(function (response) {
+      console.log(response);
+    }).catch(function (error) {
+      console.log(error);
+    })
+
     this.setState({
       submitted: true
     })

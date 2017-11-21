@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "mailing_list",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "jpatterson",
+    "password": null,
+    "database": "mailing_list",
+    "host": "molabs.ccdbx5sxfhu4.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}
