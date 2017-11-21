@@ -10,7 +10,7 @@ variables:
 connect:
   image: mysql
   script:
-  - echo "$DB_PASSWORD"
+  - echo "%DB_USERNAME, $DB_PASSWORD, $DB_HOST, $DB_NAME"
   - echo "SELECT 'OK';" | mysql --user="$DB_USERNAME" --password="$DB_PASSWORD" --host="$DB_HOST" "$DB_NAME"
 
 
