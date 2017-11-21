@@ -7,11 +7,6 @@ variables:
   DB_NAME: mailing_list
   DB_HOST: molabs.ccdbx5sxfhu4.us-east-1.rds.amazonaws.com
 
-connect:
-  image: mysql
-  script:
-  - echo "%DB_USERNAME, $DB_PASSWORD, $DB_HOST, $DB_NAME"
-  - echo "SELECT 'OK';" | mysql --user="$DB_USERNAME" --password="$DB_PASSWORD" --host="$DB_HOST" "$DB_NAME"
 
 
 pages:

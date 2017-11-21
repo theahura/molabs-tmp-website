@@ -20,7 +20,7 @@ module.exports = {
       "username": process.env.DB_USERNAME,
       "password": process.env.DB_PASSWORD,
       "database": process.env.DB_NAME,
-      "host": "molabs.ccdbx5sxfhu4.us-east-1.rds.amazonaws.com",
+      "host": process.env.DB_HOST,
       "dialect": "mysql"
     }
   }  
