@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Form } from 'semantic-ui-react'
 import axios from 'axios';
@@ -39,7 +38,8 @@ export default class MailingList extends React.Component {
     if (!this.state.submitted) {
       content = 
           <div>
-            <h1>Subscribe to our mailing list</h1>
+            <h1>Welcome to MoLabs</h1>
+            <h2>Subscribe to our mailing list to see what we are working on!</h2>
             <Form onSubmit={this.handleSubmit.bind(this)}>
               <Form.Input label="Enter email" type="email" value={this.state.email} onChange={this.handleChange.bind(this)} name="email" placeholder="myemail@gmail.com" required />
               <Form.Button type="submit">Subscribe</Form.Button>
