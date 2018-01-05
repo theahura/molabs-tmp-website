@@ -1,13 +1,3 @@
-image: node:8.9.1
-
-services: 
-  - mysql:latest
-
-variables:
-  DB_NAME: mailing_list
-  DB_HOST: molabs.ccdbx5sxfhu4.us-east-1.rds.amazonaws.com
-
-
 pages:
   stage: deploy
   script:
