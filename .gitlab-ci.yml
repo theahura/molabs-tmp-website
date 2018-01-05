@@ -8,15 +8,12 @@ variables:
   DB_HOST: molabs.ccdbx5sxfhu4.us-east-1.rds.amazonaws.com
 
 
-
 pages:
   stage: deploy
   script:
-  - npm install
-  - npm run build
-  - rm -rf public
-  - mv build public
-  - npm run start:server
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
   artifacts:
     paths:
     - public
